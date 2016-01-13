@@ -1,0 +1,14 @@
+artifactoryweb:
+    restart: always
+    image: labianchin/artifactory
+    ports:
+        - "8080:8080"
+    volumes_from:
+        - artifactorydata
+artifactorydata:
+    image: debian:jessie
+    command: echo 'volume container for artifactory data'
+    volumes:
+        - /artifactory/data
+        - /artifactory/logs
+        - /artifactory/backup
