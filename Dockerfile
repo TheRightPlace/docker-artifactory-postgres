@@ -1,4 +1,4 @@
-FROM tomcat:7-jre7
+FROM tomcat:8-jre8
 
 MAINTAINER Matthias Grüter <matthias@grueter.name>
 
@@ -14,9 +14,9 @@ RUN \
   mv /urlrewrite.xml webapps/ROOT/WEB-INF/
 
 # To update, check https://bintray.com/jfrog/artifactory/artifactory/view
-ENV ARTIFACTORY_VERSION 3.9.2
-ENV ARTIFACTORY_SHA1 245aeb7b2d77830462067d5a19c3bd32ae014ddf
-ENV ARTIFACTORY_URL https://bintray.com/artifact/download/jfrog/artifactory/artifactory-${ARTIFACTORY_VERSION}.zip
+ENV ARTIFACTORY_VERSION 4.4.1
+ENV ARTIFACTORY_SHA1 169f1dad024c0e28bc2e545a043e6e022a13a537
+ENV ARTIFACTORY_URL https://bintray.com/artifact/download/jfrog/artifactory/jfrog-artifactory-oss-${ARTIFACTORY_VERSION}.zip
 
 # Fetch and install Artifactory OSS war archive.
 RUN \
