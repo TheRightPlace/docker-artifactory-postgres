@@ -25,6 +25,8 @@ RUN \
   unzip -j artifactory.zip "artifactory-*/webapps/artifactory.war" -d webapps && \
   rm artifactory.zip
 
+ADD https://jdbc.postgresql.org/download/postgresql-9.4.1208.jar /usr/local/tomcat/lib/
+
 # Expose tomcat runtime options through the RUNTIME_OPTS environment variable.
 #   Example to set the JVM's max heap size to 256MB use the flag
 #   '-e RUNTIME_OPTS="-Xmx256m"' when starting a container.
