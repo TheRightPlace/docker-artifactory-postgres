@@ -14,8 +14,8 @@ RUN \
   mv /urlrewrite.xml webapps/ROOT/WEB-INF/
 
 # To update, check https://bintray.com/jfrog/artifactory/jfrog-artifactory-oss-zip/view
-ENV ARTIFACTORY_VERSION 4.4.1
-ENV ARTIFACTORY_SHA1 169f1dad024c0e28bc2e545a043e6e022a13a537
+ENV ARTIFACTORY_VERSION 4.5.2
+ENV ARTIFACTORY_SHA1 cad00dbc28358bc5523378808799ea523181f85e
 ENV ARTIFACTORY_URL https://bintray.com/artifact/download/jfrog/artifactory/jfrog-artifactory-oss-${ARTIFACTORY_VERSION}.zip
 
 # Fetch and install Artifactory OSS war archive.
