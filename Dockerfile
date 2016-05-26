@@ -19,8 +19,7 @@ ENV ARTIFACTORY_SHA1 cad00dbc28358bc5523378808799ea523181f85e
 ENV ARTIFACTORY_URL https://bintray.com/artifact/download/jfrog/artifactory/jfrog-artifactory-oss-${ARTIFACTORY_VERSION}.zip
 
 # Fetch and install Artifactory OSS war archive.
-RUN \
-  curl -L -o artifactory.zip $ARTIFACTORY_URL && \
+RUN curl -k -L -o artifactory.zip $ARTIFACTORY_URL && \
   echo "$ARTIFACTORY_SHA1 artifactory.zip" | sha1sum -c - && \
   unzip -j artifactory.zip "artifactory-*/webapps/artifactory.war" -d webapps && \
   rm artifactory.zip
